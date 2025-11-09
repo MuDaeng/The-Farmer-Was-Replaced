@@ -20,9 +20,9 @@ def get_move_orders(x, y):
 
 	return move_orders
 	
-def move_num(pos, num) :
+def move_num(dir, num) :
 	for i in range(num) :
-		move(pos)
+		move(dir)
 		
 def go_to(x, y):
 	move_orders = get_move_orders(x, y)
