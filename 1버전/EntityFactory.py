@@ -18,12 +18,9 @@ factory[Entities.Cactus] = Cactus
 
 def do_sectors():
 	for entity in factory:
-		def task():
+		def do_sector():
 			sector = Sector.get_sectors()[entity]
-			do_sector(factory[entity], sector)
+			while True:
+				factory[entity].do(sector)
 
-		spawn_drone(task)
-		
-def do_sector(component, sector):
-	while True:
-		component.do(sector)
+		spawn_drone(do_sector)
