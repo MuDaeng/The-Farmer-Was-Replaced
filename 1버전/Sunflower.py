@@ -101,9 +101,3 @@ def sort_leaf_by_distance(leaf_list):
 		result.append(leaf_list[min])
 	
 	return result
-	
-	
-	
-	
-	
-	
